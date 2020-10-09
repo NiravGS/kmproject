@@ -1,0 +1,316 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: #505050;
+}
+
+@font-face {
+	font-family: Sinisuka;
+	src: url(../Fonts/sinisuka-webfont.woff);
+	src: url(../Fonts/sinisuka-webfont.woff2);
+}
+
+.bg-pages {
+	background-repeat: no-repeat;
+}
+
+
+/* Welcome Area */
+
+
+#Welcome__Aera .section-title h3 {
+	font-family: Sinisuka, sans-serif;
+	font-size: 67px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 133px;
+	letter-spacing: 0em;
+	text-align: center;
+	color: #fff;
+	margin-bottom: 47px;
+}
+
+#Welcome__Aera .section-title p {
+	font-family: Roboto;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 29px;
+	letter-spacing: 0em;
+	text-align: center;
+	color: #fff;
+	margin-bottom: 66px;
+}
+
+#Welcome__Aera .welcome__slider__section .owl-carousel {
+	text-align: center;
+}
+
+#Welcome__Aera .welcome__slider__section .owl-carousel .item .slider__img {
+	margin-bottom: 25px;
+}
+
+#Welcome__Aera .welcome__slider__section .owl-carousel .item .slider__content h1 {
+	color: #fff;
+	font-family: Roboto;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 42px;
+	letter-spacing: 0em;
+	text-align: center;
+
+}
+
+#Welcome__Aera .welcome__slider__section .owl-carousel .item {
+	margin-left: 40px;
+}
+
+#Welcome__Aera .welcome__slider__section .owl-carousel .item .slider__content p {
+	color: #C4C4C4;
+	margin-bottom: 25px;
+	font-family: Roboto;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 29px;
+	letter-spacing: 0em;
+	text-align: center;
+
+}
+
+#Welcome__Aera .owl-carousel .owl-nav.disabled,
+.owl-carousel .owl-dots.disabled {
+	display: block;
+}
+
+
+
+#Welcome__Aera .welcome__slider__section .owl-nav.disabled button.owl-prev {
+	position: absolute;
+	top: 17%;
+	left: -70px;
+	color: #fff;
+	font-size: 55px;
+}
+
+#Welcome__Aera .welcome__slider__section .owl-nav.disabled button.owl-next {
+	position: absolute;
+	top: 17%;
+	right: -70px;
+	font-size: 55px;
+	color: #fff;
+}
+
+#Welcome__Aera .welcome__slider__section .owl-nav.disabled button.owl-prev:focus,
+#Welcome__Aera .welcome__slider__section .owl-nav.disabled button.owl-next:focus,
+#Welcome__Aera .welcome__slider__section .owl-nav.disabled button.owl-prev:hover,
+#Welcome__Aera .welcome__slider__section .owl-nav.disabled button.owl-next:hover {
+	outline: none;
+	background-color: transparent;
+}
+
+#Welcome__Aera {
+	padding: 95px;
+}
+
+/* Tabe Area */
+.tab__area_text {
+	padding: 96px;
+}
+
+
+.page-next-level {
+	text-align: center;
+}
+
+.page-next-level h4 {
+	font-family: Sinisuka;
+	font-size: 42px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 65px;
+	letter-spacing: 0em;
+	text-align: center;
+
+}
+
+#tab__area nav .nav-tabs .nav-link {
+	font-family: Segoe UI;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #fff;
+	padding: 8px 32px;
+}
+
+#tab__area .nav-tabs .nav-link.active {
+	background: transparent;
+	border-top: 1px solid transparent;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	border-bottom: 1px solid #fff;
+}
+
+#tab__area nav .nav-tabs .nav-link:hover {
+	border-top: 1px solid transparent;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	border-bottom: 1px solid #fff;
+}
+
+#tab__area .tab__area__content {
+	padding: 25px 0;
+}
+
+#tab__area .tab__area__content {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #bdbdbd;
+}
+
+#tab__area .tab__area_space {
+	padding: 40px 0;
+}
+
+#tab__area .tab__area__content .tab__area_menu__item h1 {
+	font-family: Segoe UI;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 23px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #00CC99;
+}
+
+#tab__area .tab__area__content .tab__area_menu__item p {
+	font-family: Segoe UI;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 18px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #fff;
+}
+
+#tab__area .tab__area__content .tab__area__price {
+	font-family: Segoe UI;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 23px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #00CC99;
+}
+
+#tab__area .tab__content__container {
+	padding: 40px 0;
+}
+
+#client__area .tab__area_text .page-next-level h4 {
+	font-family: Sinisuka;
+	font-size: 42px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 65px;
+	letter-spacing: 0em;
+	text-align: center;
+}
+
+@media(max-width:1199px) {
+	#tab__area nav .nav-tabs .nav-link {
+		font-size: 16px;
+		padding: 8px 8px;
+	}
+
+	#tab__area nav .nav-tabs {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media(max-width:991px) {
+	#Welcome__Aera .section-title h3 {
+		font-size: 40px;
+		margin-bottom: 0;
+	}
+
+	#Welcome__Aera {
+		padding: 30px;
+	}
+}
+
+@media(max-width:767px) {
+	#Welcome__Aera .welcome__slider__section .owl-carousel .item {
+		margin: 0;
+	}
+
+	#Welcome__Aera .section-title h3 {
+		font-size: 26px;
+	}
+
+	#Welcome__Aera .section-title p {
+		margin-bottom: 30px;
+	}
+
+	#tab__area .tab__area_text {
+		padding: 62px;
+	}
+
+	#tab__area .page-next-level h4 {
+		font-size: 23px;
+	}
+
+	#tab__area nav .nav-tabs {
+		width: 902px;
+	}
+
+	#tab__area nav {
+		overflow-x: scroll;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	#tab__area .tab__area__content {
+		display: block;
+		text-align: center;
+	}
+
+	#tab__area .tab__area__content .tab__area_menu__item h1 {
+		text-align: center;
+	}
+
+	#tab__area .tab__area__content .tab__area_menu__item p {
+		text-align: center;
+	}
+
+	#tab__area .tab__area__content .tab__area__price {
+		text-align: center;
+	}
+
+	#tab__area .tab__content__container {
+		padding: 0;
+	}
+
+	#tab__area nav .nav-tabs {
+		justify-content: space-between;
+	}
+
+	#tab__area nav .nav-tabs .nav-link {
+		margin: 0 15px;
+	}
+	.tab__area_text{
+		padding: 15px;
+	}
+}
