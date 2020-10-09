@@ -84,14 +84,14 @@ body {
 
 }
 
-#Welcome__Aera .owl-carousel .owl-nav.disabled,
+ .owl-carousel .owl-nav.disabled,
 .owl-carousel .owl-dots.disabled {
 	display: block;
 }
 
 
 
-#Welcome__Aera .welcome__slider__section .owl-nav.disabled button.owl-prev {
+ .owl-nav.disabled button.owl-prev {
 	position: absolute;
 	top: 17%;
 	left: -70px;
@@ -99,7 +99,7 @@ body {
 	font-size: 55px;
 }
 
-#Welcome__Aera .welcome__slider__section .owl-nav.disabled button.owl-next {
+ .owl-nav.disabled button.owl-next {
 	position: absolute;
 	top: 17%;
 	right: -70px;
@@ -107,10 +107,10 @@ body {
 	color: #fff;
 }
 
-#Welcome__Aera .welcome__slider__section .owl-nav.disabled button.owl-prev:focus,
-#Welcome__Aera .welcome__slider__section .owl-nav.disabled button.owl-next:focus,
-#Welcome__Aera .welcome__slider__section .owl-nav.disabled button.owl-prev:hover,
-#Welcome__Aera .welcome__slider__section .owl-nav.disabled button.owl-next:hover {
+ .owl-nav.disabled button.owl-prev:focus,
+ .owl-nav.disabled button.owl-next:focus,
+ .owl-nav.disabled button.owl-prev:hover,
+ .owl-nav.disabled button.owl-next:hover {
 	outline: none;
 	background-color: transparent;
 }
@@ -226,6 +226,70 @@ body {
 	line-height: 65px;
 	letter-spacing: 0em;
 	text-align: center;
+	margin-bottom: 36px;
+}
+
+/* Boottom SLider */
+.mani__clinet__area__slider .media img {
+	width: 40px;
+}
+
+.mani__clinet__area__slider .clinet__rating {
+	width: 20px;
+	display: flex;
+}
+
+.mani__clinet__area__slider .media-body p {
+	margin-bottom: 0;
+	text-align: left;
+}
+
+.mani__clinet__area__slider .media-body {
+	padding-left: 15px;
+}
+
+.mani__clinet__area__slider .clinet__rating {
+	width: 20px;
+	display: flex;
+	margin: 13px 0 20px 0;
+}
+
+.mani__clinet__area__slider p.clinet__review {
+	text-align: left;
+}
+
+.mani__clinet__area__slider {
+	background: #2C2C2C;
+	opacity: 0.8;
+	box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.15);
+	border-radius: 20px;
+	padding: 15px;
+}
+#client__area .owl-nav.disabled button.owl-prev,
+#client__area .owl-nav.disabled button.owl-next{
+	color: #00CC99;
+}
+/* Map  */
+#map__area {
+	padding: 80px 0 26px 0;
+}
+
+#map__area .map__icon {
+	display: flex;
+	align-items: center;
+}
+
+#map__area .map__icon p {
+	font-family: Segoe UI;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 34px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #fff;
+	margin: 0;
+	padding-left: 15px
 }
 
 @media(max-width:1199px) {
@@ -257,11 +321,14 @@ body {
 	}
 
 	#Welcome__Aera .section-title h3 {
-		font-size: 26px;
+		font-size: 21px;
+		line-height: 46.77px;
 	}
 
 	#Welcome__Aera .section-title p {
 		margin-bottom: 30px;
+		font-size: 14px;
+		line-height: 24px;
 	}
 
 	#tab__area .tab__area_text {
@@ -310,7 +377,22 @@ body {
 	#tab__area nav .nav-tabs .nav-link {
 		margin: 0 15px;
 	}
-	.tab__area_text{
+
+	.tab__area_text {
 		padding: 15px;
+	}
+
+	#map__area .map__icon p {
+		font-family: Segoe UI;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 20px;
+		letter-spacing: 0em;
+		text-align: left;
+	}
+	#client__area .tab__area_text .page-next-level h4{
+		font-size: 23px;
+		margin-bottom: 0;
 	}
 }

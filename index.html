@@ -463,34 +463,41 @@
 			</div>
 		</div>
 	</section>
-	<!-- <section id="client__area">
+	<section id="client__area">
 		<div class="bg-pages">
-			<div class="tab__area_text"
-				style="background-image: url('image/banner/banner2.jpg'); background-size: cover;">
+			<div class="tab__area_text" style="
+                  background-image: url('image/banner/banner2.jpg');
+                  background-size: cover;
+               ">
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-lg-12">
 							<div class="page-next-level text-white">
 								<h4 class="text-white">What people are saying</h4>
-								<div class="owl-carousel owl-theme">
+								<div class="owl-carousel owl-theme" id="clinet__rating_slider">
 									<div class="item">
 										<div class="mani__clinet__area__slider">
 											<div class="media">
-												<img src="image/banner/Ellipse 4.png" alt="" class="img-fluid">
+												<img src="image/banner/Ellipse 4.png" alt="" class="img-fluid" />
 												<div class="media-body">
-													<p class="clinet__slider__title">Ichi</p>
-													<p class="clinet__slider__date">2019-10-05</p>
+													<p class="clinet__slider__title">
+														Ichi
+													</p>
+													<p class="clinet__slider__date">
+														2019-10-05
+													</p>
 												</div>
 											</div>
 											<div class="clinet__rating">
-												<img src="image/banner/Star 5.svg" alt="">
-												<img src="image/banner/Star 5.svg" alt="">
-												<img src="image/banner/Star 5.svg" alt="">
-												<img src="image/banner/Star 5.svg" alt="">
-												<img src="image/banner/Star 5.svg" alt="">
+												<img src="image/banner/Star 5.svg" alt="" />
+												<img src="image/banner/Star 5.svg" alt="" />
+												<img src="image/banner/Star 5.svg" alt="" />
+												<img src="image/banner/Star 5.svg" alt="" />
+												<img src="image/banner/Star 5.svg" alt="" />
 											</div>
 											<p class="clinet__review">
-												Fast&trusted company, and very frienly boosters! Very Recommended!
+												Fast&trusted company, and very frienly
+												boosters! Very Recommended!
 											</p>
 										</div>
 									</div>
@@ -501,30 +508,63 @@
 				</div>
 			</div>
 		</div>
-	</section> -->
+	</section>
+	<section id="map__area">
+		<div class="container">
+			<div class="map__icon">
+				<img src="image/banner/Group.svg" alt="">
+				<p>Notting hill brasserie 92 Kensington Park Rd Notting Hill, London
+					W11 2PN
+					Great Britain</p>
+			</div>
+		</div>
+	</section>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script>
-		$(".owl-carousel").owlCarousel({
-			loop: true,
-			margin: 10,
-			responsiveClass: true,
-			nav: true,
-			dots: false,
-			responsive: {
-				320: {
-					items: 1,
-					nav: true,
+		$(document).ready(function () {
+			$("#clinet__rating_slider").owlCarousel({
+				loop: true,
+				margin: 50,
+				responsiveClass: true,
+				nav: true,
+				dots: false,
+				responsive: {
+					320: {
+						items: 1,
+						nav: true,
+					},
+					768: {
+						items: 2,
+						nav: false,
+					},
+					992: {
+						items: 3,
+						nav: false,
+					},
 				},
-				768: {
-					items: 2,
-					nav: false,
+			});
+			$(".owl-carousel").owlCarousel({
+				loop: true,
+				margin: 10,
+				responsiveClass: true,
+				nav: true,
+				dots: false,
+				responsive: {
+					320: {
+						items: 1,
+						nav: true,
+					},
+					768: {
+						items: 2,
+						nav: false,
+					},
+					992: {
+						items: 3,
+						nav: false,
+					},
 				},
-				992: {
-					items: 3,
-					nav: false,
-				},
-			},
+			});
 		});
 	</script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
