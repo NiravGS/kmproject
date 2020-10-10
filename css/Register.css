@@ -1,0 +1,210 @@
+div#Register__form {
+    width: 582px;
+    background: #2F2F2F;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    padding: 20px;
+}
+
+div#Register__form .Register__header h4 {
+    font-family: Segoe UI;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #00CC99;
+}
+
+.Register__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Register__input__area .Register__google button {
+    width: 100%;
+    height: 30px;
+    background-color: #C4C4C4;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #000;
+    border-radius: 8px;
+    outline: none;
+}
+
+.Register__google {
+    display: flex;
+    color: #000;
+}
+
+.Register__input__area .Register__google button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+}
+
+.Register__input__area .Register__google button p {
+    margin-bottom: 0;
+}
+
+.Register__input__area .Register__google button img {
+    width: 18px;
+    margin-right: 6px;
+}
+
+.Register__input__area .Register__input {
+    margin-top: 27px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Register__input__area .Register__input input {
+    width: 50%;
+    border: 1px solid #828282;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 8px;
+}
+.Register__input__name input{
+    width: 100%;
+    border: 1px solid #828282;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.Register__input__area .Register__input input:nth-child(1) {
+    margin-right: 8px;
+}
+
+.Register__input__area .Register__input input::placeholder {
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #828282;
+    padding-left: 12px;
+}
+.Register__input__password input {
+    width: 50%;
+    border: 1px solid #828282;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.Register__input__password {
+    display: flex;
+}
+
+.Register__input__password input:nth-child(1) {
+    margin-right: 10px;
+}
+#Register__form .Register__input__area .rember {
+    display: flex;
+    margin-top: 19px;
+    align-items: baseline;
+}
+
+#Register__form .Register__input__area .rember input[type="checkbox"] {
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background: transparent;
+}
+
+#Register__form .Register__input__area .rember p {
+    color: #828282;
+    margin-bottom: 0;
+    font-family: Segoe UI;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.Register__input__area {
+    margin-top: 48px;
+}
+
+.Register__btn {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.btn__Register {
+    color: #00CC99;
+    border: 1px solid #00CC99;
+
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 8px;
+}
+
+.btn__Register button {
+    background-color: transparent;
+    border: none;
+    color: #00CC99;
+    margin: auto;
+    padding: 3px;
+    width: 160px;
+    cursor: pointer;
+}
+
+.btn__Register button:hover {
+    background-color: #00CC99;
+    color: #000;
+}
+
+@media(max-width:767px) {
+    div#Register__form {
+        width: auto;
+        border-radius: 0;
+    }
+
+    .close__ic__Register {
+        display: none;
+    }
+
+    .Register__input__area {
+        margin-top: 10px;
+    }
+    .Register__input__area .Register__input{
+        margin-top: 10px;
+    }
+    .Register__input__area .Register__input{
+        display: inline-block;
+    }
+    .Register__input__area .Register__input input{
+        width: 100%;
+    }
+    .Register__input__area .Register__input input:nth-child(1){
+        margin: 0;
+    }
+    .Register__input__area .Register__input input:nth-child(2)
+    {
+        margin-top: 10px;
+    }
+    .Register__input__password{
+        display: inline-block;
+    }
+    .Register__input__password input{
+        width: 100%;
+    }
+}
