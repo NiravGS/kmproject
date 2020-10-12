@@ -174,7 +174,8 @@ body {
     border-radius: 8px;
     padding: 5px 45px 5px 45px;
     border: 0;
-    color: #fff;
+	color: #fff;
+	outline: none;
 }
 .pro_in_btn {
     text-align: center;
