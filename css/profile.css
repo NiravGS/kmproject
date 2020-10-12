@@ -1,0 +1,256 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: #505050;
+}
+
+@font-face {
+	font-family: Sinisuka;
+	src: url(../Fonts/sinisuka-webfont.woff);
+	src: url(../Fonts/sinisuka-webfont.woff2);
+}
+
+@font-face {
+	font-family: 'Segoe UI Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Segoe UI Regular'), url('../Fonts/Segoe UI.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Segoe UI Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Segoe UI Italic'), url('../Fonts/Segoe UI Italic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Segoe UI Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Segoe UI Bold'), url('../Fonts/Segoe UI Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Segoe UI Bold Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Segoe UI Bold Italic'), url('../Fonts/Segoe UI Bold Italic.woff') format('woff');
+}
+
+#tabs {
+	margin: 60px 0px 0 60px;
+}
+
+#tabs .tabs__btn .nav-link {
+	display: flex;
+}
+
+#tabs .tabs__btn .nav-link .icon {
+	margin-right: 15px;
+}
+
+#tabs .nav-pills .nav-link.active,
+.nav-pills .show>#tabs .nav-link {
+	background-color: transparent;
+}
+
+#tabs .profile__tabs__text {
+	color: #ADADAD;
+}
+
+#tabs .active .profile__tabs__text {
+	color: #00CC99;
+}
+
+
+#tabs .tabs__btn .nav-link.active .icon svg path {
+	fill: #00CC99;
+}
+
+#tabs .profile__title {
+	font-family: Segoe UI;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 23px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #00CC99;
+}
+
+#tabs .txt-box {
+	border: 1px solid #C4C4C4;
+	height: 200px;
+	border-radius: 15px;
+	padding: 23px;
+}
+
+#tabs .txt-box .profile__down_txt {
+	margin-top: 60px;
+	color: #ADADAD;
+}
+
+.profile__title__btn {
+	height: 30px;
+	width: 175px;
+	border-radius: 8px;
+	background: #00CC99;
+	text-align: center;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	margin: auto;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+#tabs .txt-box .profile__down_txt p {
+	margin-bottom: 0;
+}
+
+#tabs .right {
+	text-align: center;
+}
+
+#tabs .right .profile__down_txt {
+	margin-top: 27px;
+}
+
+#tabs .profile__title__btn a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#tabs .profile__input__area .profile__title {
+	margin: 30px 0 30px 0;
+}
+
+#tabs .profile__input__area {
+	width: 100%;
+}
+
+#tabs .edit__profile__input {
+	width: 100%;
+	display: flex;
+}
+
+
+#tabs .edit__profile__input input:nth-child(1) {
+	margin-right: 10px;
+}
+
+#tabs .edit__profile__input input {
+	width: 90%;
+	background-color: transparent;
+	outline: none;
+	border: 1px solid #C4C4C4;
+	box-sizing: border-box;
+	border-radius: 8px;
+	padding: 5px;
+}
+#tabs .email-profile {
+    margin-top: 15px;
+}
+#tabs .profile__checkbox {
+	display: flex;
+	align-items: center;
+	margin-top: 17px;
+}
+
+#tabs .profile__checkbox p {
+	margin-bottom: 0;
+	margin-left: 10px;
+	color: #ADADAD;
+
+}
+#tabs .pro_in_btn button {
+    background-color: #00CC99;
+    border-radius: 8px;
+    padding: 5px 45px 5px 45px;
+    border: 0;
+    color: #fff;
+}
+.pro_in_btn {
+    text-align: center;
+    margin-top: 30px;
+}
+@media(max-width:767px) {
+	#tabs {
+		margin: 0;
+	}
+
+	#tabs .txt-box {
+		height: auto;
+	}
+
+	#tabs .profile__tabs__text {
+		font-size: 13px;
+		display: flex;
+		align-items: center;
+	}
+
+	#tabs .tabs__btn .nav-link .icon svg {
+		width: 18px;
+	}
+
+	#tabs .profile__title {
+		font-size: 13px;
+	}
+
+	#tabs .txt-box .profile__down_txt {
+		margin-top: 30px;
+	}
+
+	#tabs .txt-box .profile__down_txt p {
+		font-size: 14px;
+	}
+	#tabs .edit__profile__input{
+		display: inline-block;
+	}
+	#tabs .edit__profile__input input{
+		width: 100%;
+		margin-top: 10px;
+	}
+	#tabs .edit__profile__input input:nth-child(1){
+		margin-right: 0;
+	}
+	#tabs .email-profile{
+		margin-top: 0;
+	}
+	#tabs .txt-box.right {margin-top: 15px;}
+
+}
+
+@media (min-width:425px) and (max-width:767px) {
+	.tabs__btn {
+		position: absolute;
+		width: 50%;
+		top: 0;
+		left: 0;
+	}
+
+	.tab_detail {
+		position: absolute;
+		top: 210px;
+		left: 0;
+		width: 100%;
+	}
+
+	.welcome__input {
+		top: -200px;
+		right: 0;
+		position: absolute;
+		width: 58%;
+	}
+}
+@media(max-width:320px){
+	.txt-box {
+		margin-top: 10px;
+	}
+}
