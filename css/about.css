@@ -948,6 +948,10 @@ body {
 		border-radius: 79px;
 		width: 90px;
 	}
+	#Team__area div#team__rating_slider{
+		margin-top: 89px;
+
+	}
 }
 
 @media(max-width:991px) and (min-width:768px) {
