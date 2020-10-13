@@ -944,6 +944,10 @@ body {
 		color: #b5b5b5;
 		line-height: 25px;
 	}
+	#Team__area .mani__clinet__area__slider .media img{
+		border-radius: 79px;
+		width: 90px;
+	}
 }
 
 @media(max-width:991px) and (min-width:768px) {
