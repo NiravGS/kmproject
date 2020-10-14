@@ -1,0 +1,863 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: #505050;
+}
+
+@font-face {
+	font-family: Sinisuka;
+	src: url(../Fonts/sinisuka-webfont.woff);
+	src: url(../Fonts/sinisuka-webfont.woff2);
+}
+
+@font-face {
+	font-family: 'Segoe UI Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Segoe UI Regular'), url('../Fonts/Segoe UI.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Segoe UI Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Segoe UI Italic'), url('../Fonts/Segoe UI Italic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Segoe UI Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Segoe UI Bold'), url('../Fonts/Segoe UI Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Segoe UI Bold Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Segoe UI Bold Italic'), url('../Fonts/Segoe UI Bold Italic.woff') format('woff');
+}
+
+.bg-pages {
+	background-repeat: no-repeat;
+}
+
+/* Menu */
+#menu .container {
+	position: absolute;
+	width: 100%;
+	heigh: 100%;
+	text-align: center;
+	top: 40%;
+	left: 0;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+#menu .container p {
+	font-size: 20px;
+}
+
+#menu .container a {
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	color: #FF5252;
+	text-decoration: none;
+	font-size: 20px;
+	overflow: hidden;
+	top: 5px;
+}
+
+#menu .container a:after {
+	content: '';
+	position: absolute;
+	background: #FF5252;
+	height: 2px;
+	width: 0%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	left: 50%;
+	bottom: 0;
+	-webkit-transition: .35s ease;
+	transition: .35s ease;
+}
+
+#menu .container a:hover:after,
+#menu .container a:focus:after,
+#menu .container a:active:after {
+	width: 100%;
+}
+
+#menu h1 {
+	position: relative;
+	text-align: center;
+	font-family: 'Vollkorn', serif;
+}
+
+#menu .button_container {
+	position: fixed;
+	top: 5%;
+	left: 2%;
+	height: 27px;
+	width: 35px;
+	cursor: pointer;
+	z-index: 100;
+	-webkit-transition: opacity .25s ease;
+	transition: opacity .25s ease;
+}
+
+#menu .button_container:hover {
+	opacity: .7;
+}
+
+#menu .button_container.active .top {
+	-webkit-transform: translateY(11px) translateX(0) rotate(45deg);
+	transform: translateY(11px) translateX(0) rotate(45deg);
+	background: #FFF;
+}
+
+#menu .button_container.active .middle {
+	opacity: 0;
+	background: #FFF;
+}
+
+#menu .button_container.active .bottom {
+	-webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
+	transform: translateY(-11px) translateX(0) rotate(-45deg);
+	background: #FFF;
+}
+
+#menu .button_container span {
+	background: #fff;
+	border: none;
+	height: 5px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transition: all .35s ease;
+	transition: all .35s ease;
+	cursor: pointer;
+}
+
+#menu .button_container span:nth-of-type(2) {
+	top: 11px;
+}
+
+#menu .button_container span:nth-of-type(3) {
+	top: 22px;
+}
+
+#menu .overlay {
+	position: fixed;
+	background: #000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity .35s, visibility .35s, height .35s;
+	transition: opacity .35s, visibility .35s, height .35s;
+	overflow: hidden;
+	z-index: 99;
+}
+
+#menu .overlay.open {
+	opacity: .9;
+	visibility: visible;
+	height: 100%;
+}
+
+#menu .overlay.open li {
+	-webkit-animation: fadeInRight .5s ease forwards;
+	animation: fadeInRight .5s ease forwards;
+	-webkit-animation-delay: .35s;
+	animation-delay: .35s;
+}
+
+#menu .overlay.open li:nth-of-type(2) {
+	-webkit-animation-delay: .4s;
+	animation-delay: .4s;
+}
+
+#menu .overlay.open li:nth-of-type(3) {
+	-webkit-animation-delay: .45s;
+	animation-delay: .45s;
+}
+
+#menu .overlay.open li:nth-of-type(4) {
+	-webkit-animation-delay: .50s;
+	animation-delay: .50s;
+}
+
+#menu .overlay nav {
+	position: relative;
+	height: 70%;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-size: 50px;
+	font-family: 'Vollkorn', serif;
+	font-weight: 400;
+	text-align: left;
+	margin-left: 10%;
+}
+
+#menu .overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	position: relative;
+	height: 100%;
+}
+
+#menu .overlay ul li {
+	display: block;
+	height: 25%;
+	height: calc(100% / 6);
+	min-height: 50px;
+	position: relative;
+	opacity: 0;
+}
+
+#menu .overlay ul li a {
+	display: block;
+	position: relative;
+	color: #FFF;
+	text-decoration: none;
+	overflow: hidden;
+	font-family: Segoe UI;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 40px;
+	letter-spacing: 0em;
+	text-align: left;
+
+}
+
+#menu .overlay ul li a:hover:after,
+#menu .overlay ul li a:focus:after,
+#menu .overlay ul li a:active:after {
+	width: 100%;
+}
+
+#menu .overlay ul li a:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	height: 3px;
+	background: #FFF;
+	-webkit-transition: .35s;
+	transition: .35s;
+}
+
+#menu .social__header__ul {
+	display: flex !important;
+}
+
+#menu .social__header__ul li {
+	padding-left: 20px;
+}
+
+@-webkit-keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		left: 20%;
+	}
+
+	100% {
+		opacity: 1;
+		left: 0;
+	}
+}
+
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		left: 20%;
+	}
+
+	100% {
+		opacity: 1;
+		left: 0;
+	}
+}
+
+.profile__title:before {
+	content: "";
+	height: 2px;
+	width: 83px;
+	background-color: #ffff;
+	display: block;
+}
+
+.profile__title {
+	display: flex;
+	align-items: center;
+}
+
+.profile__title h1 {
+	margin-left: 10px;
+	font-size: 20px;
+}
+
+#myRestro .myRestroContent {
+	color: #fff;
+	margin: 48px 0 0 93px;
+	position: relative;
+}
+
+#myRestro .myRestroContent p {
+	width: 100%;
+	max-width: 710px;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+#myRestro .myRestroContent:after {
+	content: "2020";
+	font-family: Segoe UI;
+	font-size: 160px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 180px;
+	letter-spacing: 0em;
+	text-align: left;
+	position: absolute;
+	color: #00CC99;
+	opacity: 0.1;
+	top: 20%;
+	right: 22%;
+}
+
+
+.profile__title {
+	font-family: Segoe UI;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 23px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #00CC99;
+}
+
+#myRestro {
+	padding: 68px;
+}
+
+.owl-carousel .owl-nav.disabled,
+.owl-carousel .owl-dots.disabled {
+	display: block;
+}
+
+
+
+.owl-nav.disabled button.owl-prev {
+	position: absolute;
+	top: 17%;
+	left: -70px;
+	color: #fff;
+	font-size: 55px;
+}
+
+.owl-nav.disabled button.owl-next {
+	position: absolute;
+	top: 17%;
+	right: -70px;
+	font-size: 55px;
+	color: #fff;
+}
+
+.owl-nav.disabled button.owl-prev:focus,
+.owl-nav.disabled button.owl-next:focus,
+.owl-nav.disabled button.owl-prev:hover,
+.owl-nav.disabled button.owl-next:hover {
+	outline: none;
+	background-color: transparent;
+}
+
+.onlineOrderCard {
+    background-color: #393939;
+    padding: 20px;
+}
+.onlineOrderCard .nav-pills>.nav-link{
+    color: #fff;
+}
+.onlineOrderCard .nav-pills .nav-link.active, .onlineOrderCard .nav-pills .show>.nav-link {
+    background-color: transparent;
+    color: #fff;
+}
+
+
+/* Tabe Area */
+.tab__area_text {
+	padding: 96px;
+}
+
+
+.page-next-level {
+	text-align: center;
+}
+
+.page-next-level h4 {
+	font-family: Sinisuka;
+	font-size: 70px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 65px;
+	letter-spacing: 0em;
+	text-align: center;
+
+}
+
+
+
+
+
+/* Map  */
+#map__area {
+	padding: 80px 0 26px 0;
+}
+
+#map__area .map__icon {
+	display: flex;
+	align-items: center;
+}
+
+#map__area .map__icon p {
+	font-family: Segoe UI;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 34px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #fff;
+	margin: 0;
+	padding-left: 15px
+}
+
+.maps__area__iframe iframe {
+	width: 100%;
+	height: 465px;
+}
+
+/* footer */
+#footer {
+	padding: 37px;
+	position: relative;
+	background-color: #000;
+}
+
+#footer .footer__logo {
+	text-align: center;
+	margin-bottom: 37px;
+}
+
+#footer .footer__link ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+}
+
+#footer .footer__link ul li {
+	padding-left: 38px;
+}
+
+#footer .footer__link ul li a {
+	font-family: Segoe UI;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #fff;
+}
+
+#footer form.subscribe_form input {
+	border: 1px solid #C4C4C4;
+	box-sizing: border-box;
+	border-radius: 8px;
+	background-color: transparent;
+	width: 100%;
+	max-width: 255px;
+	border-radius: 5px 0 0 5px;
+
+}
+
+#footer form.subscribe_form span.input-group-btn button {
+	border-radius: 0 5px 5px 0;
+}
+
+
+
+#footer .footer-bottom form {
+	border: 1px solid #e7e7e7;
+	position: relative;
+	border-radius: 5px;
+	width: 255px;
+}
+
+
+
+#footer .footer-bottom form input,
+#footer .footer-bottom form input:focus {
+	border: none;
+	background: transparent;
+	box-shadow: inherit;
+	min-height: 40px;
+	padding-left: 25px;
+	font-size: 14px;
+	color: #828282;
+}
+
+#footer .footer-bottom form button {
+	position: absolute;
+	right: 0;
+	top: -5px;
+	height: 50px;
+	width: 50px;
+	border: none;
+	color: #fff;
+	border-radius: 50%;
+	background-color: transparent;
+}
+
+
+
+
+#footer .footer-bottom h4 {
+	margin: 0;
+	font-weight: 600;
+	line-height: 45px;
+}
+
+#footer .footer-bottom h4 i {
+	font-size: 30px;
+	align-items: center;
+	margin-right: 5px;
+	color: #ff3514;
+	position: relative;
+}
+
+#footer .footer-bottom .footer__bottom__main {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#footer .footer__button a {
+	width: 80px;
+	border: 1px solid #00CC99;
+	padding: 8px 23px;
+	color: #fff;
+	border-radius: 8px;
+	text-decoration: none;
+	font-family: Segoe UI;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 21px;
+	letter-spacing: 0em;
+	text-align: left;
+	margin-right: 22px;
+}
+
+#footer .footer__button a:hover {
+	color: #000;
+	background: #00CC99;
+}
+
+#footer .footer__copyright p {
+	margin-bottom: 0;
+	font-family: Segoe UI;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 19px;
+	letter-spacing: 0em;
+	text-align: center;
+	color: #828282;
+
+}
+
+.mobile__footer {
+	display: none;
+}
+
+@media(max-width:1199px) {
+	#tab__area nav .nav-tabs .nav-link {
+		font-size: 16px;
+		padding: 8px 8px;
+	}
+
+	#tab__area nav .nav-tabs {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media(max-width:991px) {
+	#Welcome__Aera .section-title h3 {
+		font-size: 40px;
+		margin-bottom: 0;
+	}
+
+	#Welcome__Aera {
+		padding: 30px;
+	}
+}
+
+@media(max-width:767px) {
+	#Welcome__Aera .welcome__slider__section .owl-carousel .item {
+		margin: 0;
+	}
+
+	#Welcome__Aera .section-title h3 {
+		font-size: 21px;
+		line-height: 46.77px;
+	}
+
+	#Welcome__Aera .section-title p {
+		margin-bottom: 30px;
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+	#tab__area .tab__area_text {
+		padding: 62px;
+	}
+
+	#tab__area .page-next-level h4 {
+		font-size: 23px;
+	}
+
+	#tab__area nav .nav-tabs {
+		width: 902px;
+	}
+
+	#tab__area nav {
+		overflow-x: scroll;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	#tab__area .tab__area__content {
+		display: block;
+		text-align: center;
+	}
+
+	#tab__area .tab__area__content .tab__area_menu__item h1 {
+		text-align: center;
+	}
+
+	#tab__area .tab__area__content .tab__area_menu__item p {
+		text-align: center;
+	}
+
+	#tab__area .tab__area__content .tab__area__price {
+		text-align: center;
+	}
+
+	#tab__area .tab__content__container {
+		padding: 0;
+	}
+
+	#tab__area nav .nav-tabs {
+		justify-content: space-between;
+	}
+
+	#tab__area nav .nav-tabs .nav-link {
+		margin: 0 15px;
+	}
+
+	.tab__area_text {
+		padding: 15px;
+	}
+
+	#map__area .map__icon p {
+		font-family: Segoe UI;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 20px;
+		letter-spacing: 0em;
+		text-align: left;
+	}
+
+	#client__area .tab__area_text .page-next-level h4 {
+		font-size: 23px;
+		margin-bottom: 0;
+	}
+
+	.desktop__footer {
+		display: none;
+	}
+
+	.mobile__footer {
+		display: block;
+	}
+
+	#footer {
+		padding: 15px;
+		padding-top: 40px;
+	}
+
+	#footer .footer__link ul {
+		display: block;
+	}
+
+	#footer .footer__link ul li {
+		padding-left: 0;
+		padding-bottom: 25px
+	}
+
+	#footer .footer__logo {
+		margin-bottom: 20px;
+	}
+
+	section#footer .side_logo .right__footer .footer__button a {
+		width: 80% !important;
+		padding: 8px 14px !important;
+		margin-left: 0 !important;
+		display: block;
+		text-align: center;
+		margin-left: auto;
+	}
+
+	section#footer .side_logo .right__footer .footer__button a:nth-child(1) {
+		margin-bottom: 15px;
+	}
+
+	.side_logo .footer__cart__icon img {
+		height: 40px;
+		width: 40px;
+		border: 1px solid #fff;
+		padding: 7px;
+		border-radius: 7px;
+		margin-top: 20px;
+	}
+
+	.subscribe-form {
+		border: 1px solid #e7e7e7;
+		position: relative;
+		border-radius: 5px;
+		width: 255px;
+	}
+
+	.subscribe-form input,
+	.subscribe-form input:focus {
+		border: none;
+		background: transparent;
+		border: none;
+		background: transparent;
+		box-shadow: inherit;
+		min-height: 40px;
+		padding-left: 25px;
+		font-size: 14px;
+		color: #828282;
+	}
+
+	.subscribe-form button {
+		position: absolute;
+		right: 0;
+		top: -5px;
+		height: 50px;
+		width: 50px;
+		border: none;
+		color: #fff;
+		border-radius: 50%;
+		background-color: transparent;
+	}
+
+	.copy__footer__mobile {
+		display: block;
+		font-family: Segoe UI;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 19px;
+		letter-spacing: 0em;
+		text-align: center;
+		margin: auto;
+		padding-top: 10px;
+		color: #828282;
+	}
+
+	#footer .footer__logo {
+		text-align: left;
+	}
+
+	.mobile__footer>.row {
+		justify-content: space-between;
+	}
+
+	.side_logo .footer__loo {
+		margin-bottom: 20px;
+	}
+
+	#myRestro .myRestroContent:after {
+		display: none;
+	}
+
+	#myRestro {
+		padding: 40px;
+	}
+
+	#myRestro .myRestroContent {
+		margin: 20px 0 0 0px;
+	}
+
+	.profile__title:before {
+		width: 21px;
+		left: 0%;
+		position: absolute;
+	}
+
+	#myRestro .container {
+		padding: 0;
+	}
+	.page-next-level h4 {
+		font-size: 30px;
+	}
+	
+	p.text-up {
+		height: 125px;
+		width: 380px;
+		left: 17px;
+		top: 916px;
+		color: #b5b5b5;
+		line-height: 25px;
+	}
+	#Team__area .mani__clinet__area__slider .media img{
+		border-radius: 79px;
+		width: 90px;
+	}
+	#Team__area div#team__rating_slider{
+		margin-top: 89px;
+
+	}
+}
+
+@media(max-width:991px) and (min-width:768px) {
+	#myRestro .myRestroContent:after {
+		top: 50%;
+		right: 0;
+	}
+}

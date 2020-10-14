@@ -1,0 +1,237 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #505050;
+}
+
+@font-face {
+    font-family: Sinisuka;
+    src: url(../Fonts/sinisuka-webfont.woff);
+    src: url(../Fonts/sinisuka-webfont.woff2);
+}
+
+@font-face {
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Regular'), url('../Fonts/Segoe UI.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Segoe UI Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Italic'), url('../Fonts/Segoe UI Italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Segoe UI Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold'), url('../Fonts/Segoe UI Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Segoe UI Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold Italic'), url('../Fonts/Segoe UI Bold Italic.woff') format('woff');
+}
+
+.bg-pages {
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    padding: 130px;
+}
+
+.page-next-level {
+    text-align: center;
+
+}
+
+.page-next-level h4 {
+    font-family: Sinisuka;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 65px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+
+#myRestro {
+    padding: 68px;
+}
+
+.profile__title {
+    font-family: Segoe UI;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #00CC99;
+}
+
+.profile__title {
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 15px 0px;
+}
+
+.profile__title:before {
+    content: "";
+    height: 2px;
+    width: 83px;
+    background-color: #ffff;
+    display: block;
+}
+
+.profile__title h1 {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.location {
+    display: flex;
+    align-items: baseline;
+    color: #fff;
+    margin-left: 83px;
+}
+
+.location p {
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 309px;
+    margin-left: 15px;
+}
+
+.location__description p {
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    width: 100%;
+    max-width: 361px;
+}
+
+.call {
+    display: flex;
+    align-items: center;
+}
+
+.call .call__desc a {
+    font-family: Segoe UI;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+}
+.location__description p.time__data {
+    margin-top: 50px;
+}
+.call.call__email {
+    margin-top: 50px;
+}
+.social__icon {
+    text-align: center;
+    padding-top: 70px;
+}
+.social__icon img {
+    padding: 0px 8px;
+}
+
+
+
+@media(max-width:1199px) {}
+
+@media(max-width:991px) {
+    .location{
+        margin-left: 0;
+    }
+    .profile__title{
+        position: relative;
+        padding-bottom: 15px;
+    }
+    .profile__title:before{
+        position: absolute;
+        left: -47px;
+        width: 45px;
+    }
+    .location__description p{
+        font-size: 16px;
+    }
+    .call .call__desc a{
+        font-size: 16px;
+    }
+    .location__description p.time__data {
+        margin-top: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .bg-pages {
+        padding: 62px;
+    }
+    .page-next-level h4 {
+        font-size: 23px;
+    }
+    #myRestro {
+        padding:40px 20px;
+    }
+    .profile__title:before {
+        width: 21px;
+        left: 0%;
+        position: absolute;
+        transform: translateX(-22px);
+    }
+    .location {
+        margin-left: 0;
+        padding-top: 23px;
+    }
+    .location__description p {
+        font-size: 17px;
+        margin-left: 6px;
+    }
+    .call .call__desc a {
+        font-size: 17px;
+    }
+    .call {
+        margin-top: 30px;
+    }
+    .location__description p.time__data {
+        margin-top: 10px;
+    }
+    .call.call__email {
+        margin-top: 30px;
+    }
+    .call.call__email .call__desc a {
+        display: block;
+    }
+    .call .call__desc a{
+        margin-left: 6px;
+    }
+    .profile__title{
+        position: relative;
+    }
+}
